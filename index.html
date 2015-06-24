@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Liwe</title>
+
+  <meta name="description" content="Introduction to Liwe">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+  var link = document.createElement( 'link' );
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+  document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+
+  <style>
+    /* Style override */
+    .reveal ul {
+      list-style: none;
+      margin: 24px auto;
+
+      display:flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: flex-start;
+      align-items: flex-start;
+    }
+    .reveal ul li {
+      margin: 6px;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-family: 'Raleway';
+      font-size: 2em;
+      background: white;
+      color: black;
+    }
+    .reveal .slides {
+      text-align: left;
+    }
+
+    .reveal .js-theme {
+      color: #323330;
+    }
+
+    .reveal p.quote {
+      position: relative;
+      font-family: 'Raleway';
+      font-style: italic;
+      font-size: 2em;
+      text-decoration: underline;
+    }
+
+    .response {
+      padding: 10px;
+      border-radius: 4px;
+      text-align: center;
+      font-weight: bold;
+      background-color: rgba(255,255,255,0.25);
+    }
+    .response.positive {
+      background-color: #00dd00;
+    }
+    .response.negative {
+      background-color: #dd0000;
+    }
+
+    .reveal .doge {
+      position: absolute;
+      font-family: 'Comic Sans MS', fantasy;
+    }
+
+    .reveal .block {
+      display: block;
+      margin: auto;
+    }
+
+    .reveal .headline {
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .reveal .shadow {
+      text-shadow: 0 0.05em 0 #333;
+    }
+
+    .reveal .shadow-large {
+      text-shadow: 0 4px 8px #000;
+    }
+
+    .reveal .quote {
+      border-left: 14px solid #fff;
+      padding-left: 0.3em;
+      font-style: italic;
+    }
+
+    .reveal .hype {
+      padding: 0 14px;
+      border-radius: 6px;
+      border: 4px solid #fff;
+    }
+  </style>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+        <!-- Intro -->
+        <section data-background="assets/liwe_cover_3.jpg">
+          <h1 class="shadow-large">Liwe</h1>
+          <h2 class="shadow-large">an open source remote control for web applications</h2>
+        </section>
+
+        <section data-background="#dd0000">
+          <p style="text-align: center;">
+            <b>WARNING</b><br/>
+            This talk is not technical.<br/>It is subject to troll.<br/>A lot of NodeJS code were harmed in the making of this project.
+          </p>
+        </section>
+
+        <!-- Liwe intro -->
+        <section>
+          <object type="image/svg+xml" data="assets/liwe_logo.svg" class="block" style="width: 600px; height: 500px;"></object>
+        </section>
+
+        <section>
+          <img class="block" src="assets/tvjs_screenshot.png" />
+          <h3>
+            <a href="https://github.com/SamyPesse/tv.js">tv.js</a> by SamiPresse
+          </h3>
+        </section>
+
+        <section>
+          <h1 class="quote">That's cool!<br>I want to create my own.</h1>
+          <p>Me. (being silly)</p>
+        </section>
+
+        <section>
+          <!-- Empty section to not blow up the transition to the next section -->
+        </section>
+
+        <!-- Storyboard of remoting creation -->
+        <section data-transition="none"  data-background="assets/IMG_7801.jpg">
+          <h1 class="headline shadow-large">defining protocol</h1>
+        </section>
+        <section data-transition="none"  data-background="assets/IMG_7815.jpg">
+          <h1 class="headline shadow-large">setup a node repo</h1>
+        </section>
+        <section data-transition="none"  data-background="assets/IMG_7817.jpg">
+          <h1 class="headline shadow-large">choose which packages to use</h1>
+        </section>
+        <section data-transition="none"  data-background="assets/IMG_7819.jpg">
+          <h1 class="headline shadow-large">sketch remote web app</h1>
+        </section>
+        <section data-transition="none"  data-background="assets/IMG_7820.jpg">
+          <h1 class="headline shadow-large">choose a JS framework to build it</h1>
+        </section>
+        <section data-transition="none"  data-background="assets/IMG_7826.jpg">
+          <h1 class="headline shadow-large">make it responsive and simple</h1>
+        </section>
+        <section data-transition="none"  data-background="assets/IMG_7836.jpg">
+          <h1 class="headline shadow-large">build a client for the webapp</h1>
+        </section>
+        <section data-transition="none"  data-background="assets/IMG_7829.jpg">
+          <h1 class="headline shadow-large">debugging</h1>
+        </section>
+        <section data-transition="none"  data-background="assets/IMG_7827.jpg">
+          <h1 class="headline shadow-large">realise that some cases are missing</h1>
+        </section>
+        <section data-transition="none"  data-background="assets/IMG_7803.jpg">
+          <h1 class="headline shadow-large">rebuild the protocol</h1>
+        </section>
+        <section data-transition="none"  data-background="assets/IMG_7834.jpg">
+          <h1 class="headline shadow-large">debugging</h1>
+        </section>
+        <section data-transition="none"  data-background="assets/screenshot_1.png">
+          <h1 class="headline shadow-large">make your node server cleaner</h1>
+        </section>
+        <section data-transition="none"  data-background="assets/IMG_7835.jpg">
+          <h1 class="headline shadow-large">debugging</h1>
+        </section>
+        <section data-transition="none"  data-background="assets/IMG_7837.jpg">
+          <h1 class="headline shadow-large">discover that you don't handle disconnection correctly</h1>
+        </section>
+        <section data-transition="none"  data-background="assets/IMG_7805.jpg">
+          <h1 class="headline shadow-large">come back to conception</h1>
+        </section>
+        <section data-transition="none"  data-background="assets/mario_1.png">
+          <h1 class="headline shadow-large">cross the castle</h1>
+        </section>
+        <section data-transition="none"  data-background="assets/mario_2.png">
+          <h1 class="headline shadow-large">kill the boss</h1>
+        </section>
+        <section data-transition="none"  data-background="assets/mario_3.png">
+          <h1 class="headline shadow-large">then realise that your princess is in another castle</h1>
+        </section>
+
+        <section  data-background="assets/thedude.gif">
+          <h1>It <span class="hype">suuuucks</span></h1>
+        </section>
+
+        <section>
+          <h2>Because,<br>
+          <span class="fragment">it need conception</span><br>
+          <span class="fragment">it need time</span><br>
+          <span class="fragment">it require a server</span>
+          </h2>
+        </section>
+
+        <section>
+          <h2>OK,<br>there is something to do.</h2>
+        </section>
+
+        <section>
+          <h2>Something,<br>accessible for n00bs</h2>
+        </section>
+
+        <section>
+          <h2>Something,<br>using the most of smartphone sensors</h2>
+        </section>
+
+        <section>
+          <h2>Something,<br>open source</h2>
+        </section>
+
+
+
+        <!-- BLUEPRINT ++++++++++++++++++++++++++++++++++++++++++ -->
+        <!-- How it works -->
+        <section data-background="assets/liwe.plan.png">
+        </section>
+
+
+        <!-- SERVER +++++++++++++++++++++++++++++++++++++++++++++ -->
+        <section>
+          <h1>Server</h1>
+        </section>
+
+        <section>
+          <h2>NodeJS (of course)<br>
+          <span class="fragment">Built with Express and SockJS</span><br>
+          <span class="fragment"><u><i>liwe.co</i></u> is hosting the project</span>
+          </h2>
+        </section>
+        <!--
+        Yes, only one instance at the moment. But anybody is free to
+        create is own and rule over it like a despot.
+        -->
+
+
+        <!-- WEBAPP +++++++++++++++++++++++++++++++++++++++++++++ -->
+        <section data-background="assets/demo_circular_menu.gif">
+          <h1 class="shadow-large">the WebApp</h1>
+          <h3 class="shadow-large">the client side</h3>
+        </section>
+
+        <section>
+          <h2>no plugin,<br>no servers,<br>just JavaScript</h2>
+          <h2 class="fragment">With a lovelay API.</h2>
+        </section>
+        <!--
+        That was the challenge to make this project appealing to any developer.
+        Make it easy to use. My best example is about jQuery. This library is
+        so easy to understand that many people started JavaScript with it, then
+        moved to proper JavaScript. The API make the complete difference. 
+        -->
+
+
+
+        <!-- API ++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <section>
+          <h1>the API</h1>
+        </section>
+
+        <section>
+          <h2>Insert Liwe script</h2>
+          <pre>
+            <code data-trim contenteditable>
+&#60;script src="http://liwe.co/api/liwe.js"&#62;
+&#60;/script&#62;
+            </code>
+          </pre>
+        </section>
+        <!--
+        The minimum requirement.
+        Otherwise, we won't go far.
+
+        Just a note: In these slides, I tried to keep short chunks of code.
+        Because, usually, if you display a massive block of code, most of
+        the people got the same reflex: *discretly check your smartphone*
+        -->
+
+        <section>
+          <h2>Create a Liwe object</h2>
+          <pre>
+            <code data-trim contenteditable>
+var myLiwe = new Liwe({
+  key: 'tr0l0l0lOl0Ol0Lo0000ooOo',
+  maxRemoteConn: 4
+});
+            </code>
+          </pre>
+        </section>
+        <!--
+        Create a Liwe object, with a connection key (which is specific to a
+        domain, you can ask one on liwe.co) then the maximum of remotes
+        simultaneously connected to your object.
+        -->
+
+        <section>
+          <h2>Listen for connection</h2>
+          <pre>
+            <code data-trim contenteditable>
+myLiwe.on('connect', function (info) {
+  promptr('Grab your smartphone and go on ' +
+          info.url);
+});
+            </code>
+          </pre>
+        </section>
+        <!--
+        Listen for connection and get the information about it.
+        Mainly the URL entry point for your remote(s).
+
+        The Liwe object will listen for 4 kind of events: 
+        - connect
+        - new_remote
+        - disconnect
+        - error
+        -->
+
+        <section>
+          <h2>Wait for a remote</h2>
+          <pre>
+            <code data-trim contenteditable>
+myLiwe.on('new_remote', function (remote) {
+  remote.setUI('button');
+  remote.on('button', function (e) {
+    ...
+  });
+});
+            </code>
+          </pre>
+        </section>
+        <!--
+        Then you listen for new remotes.
+        The callback will be called with a Remote object for only
+        attribute. This object represent a Remote. From it you can
+        access his color and status.
+        Then you can set a user interface on it from the one available,
+        that's the way it works. There's some UI available (gyro,
+        button, touch) which will send back the data from the remote.
+        A simple listener on these events and you're ready to exploit
+        them for what ever you want.
+        It's also possible to change change UI at anytime.
+        You can also disconnect a remote  
+        -->
+
+
+
+        <!-- REMOTE +++++++++++++++++++++++++++++++++++++++++++++ -->
+        <section data-background="assets/demo_button_press.gif">
+          <h1 class="shadow-large">the Remote</h1>
+          <h3 class="shadow-large">the final user</h3>
+        </section>
+
+        <!-- The advantages of the HTML only -->
+        <section>
+          <h2>no app,<br>no form,<br>just a URL</h2>
+          <h2 class="fragment">It's HTML only.</h2>
+        </section>
+        <!-- 
+        No app is required, no need to register, this has to be quick.
+        You don't want to wait, you want to make the things fast.
+        On the other side, building an app wouldn't be really compatible
+        with the open source model. Making liwe a hassle to build for
+        yourself.
+        The HTML page is quickly accessible, cross platform, and was build
+        to be responsive. It has been built and tested with an iPhone 4
+        on iOS 7, and it was smooooth.
+        -->
+
+        <!-- Use the best of sensors -->
+        <section data-background="assets/demo_3d.gif" data-transition="none">
+          <object type="image/svg+xml" data="assets/ui.svg" class="block" style="width: 720px; height: 480px;"></object>
+        </section>
+
+        <section data-background="assets/demo_3d.gif" data-transition="none">
+          <object type="image/svg+xml" data="assets/sensors.svg" class="block" style="width: 720px; height: 480px;"></object>
+        </section>
+        <!-- 
+        At the moment the 3 UI availables (:button, touch and gyro) are using
+        only 2 sensors available from the JavaScript API. But more and more
+        sensors are available from JavaScript, making more possibilities.
+        -->
+
+
+
+        <!-- THE DARK SIDE OF THE MOON ++++++++++++++++++++++++++ -->
+        <section data-background="assets/darthvader.jpg">
+          <h1>Now,<br>the dark side.</h1>
+        </section>
+        <!--
+        Liwe is quite fresh and fragile. This is just a prototype.
+        And there's a long way to go to get this repo solid like
+        a rock.
+        -->
+
+        <section>
+          <!-- Empty section to not blow up the transition to the next section -->
+        </section>
+
+        <section data-transition="none" data-background="assets/doom_02.png">
+          <h1 class="headline shadow-large">No proper protocol defined</h1>
+        </section>
+        <!--
+        I'm not really proud of this but the original protocol was
+        designed after few drinks. So, if the original draft is blurry,
+        I let you imagine the state of modifications I did to it..
+        -->
+
+        <section data-transition="none" data-background="assets/doom_03.png">
+          <h1 class="headline shadow-large">Old package dependencies</h1>
+        </section>
+        <!--
+        The project is still using old packages from when I started the
+        project. Angular 1.2, Express 3....
+        -->
+
+        <section data-transition="none" data-background="assets/doom_04.png">
+          <h1 class="headline shadow-large">Lack of flexibility and component</h1>
+        </section>
+        <!--
+        The code is not componetised enough to let any developer use a
+        feature/part of the project for his personal usage. You must
+        take the entire entity. A shame.
+        Even to add a new remote UI, it's not as smooth as it could be.
+        -->
+
+        <section data-transition="none" data-background="assets/doom_05.png">
+          <h1 class="headline shadow-large">Massive lack of security</h1>
+        </section>
+        <!--
+        Liwe.co is in http only. I can't even ironacally say 'lol'
+        -->
+
+        <section data-transition="none" data-background="assets/doom_06.gif">
+          <h1 class="headline shadow-large">NO UNIT/E2E TESTS!</h1>
+          <h3 class="headline shadow-large">YES I KNOW OMG WHADAFOLK AND STUFF</h3>
+        </section>
+        <!--
+        That's the biggest shame. But there's a reason behind it.
+        The first objective was to build a proof of concept. To be
+        sure that's something which could work on old phone with a
+        crappy 3G connection. Then if a community of dev found the
+        project interesting, I would rebuild all parts in a correct
+        process of development.
+        -->
+
+        <section data-background="assets/opensource_logo.png">
+          <h1 style="color: #333;">This is why I need your help</h1>
+          <h3 style="color: #333;">Feedback, improve code and new ideas</h3>
+        </section>
+        <!--
+        Fork, set an issue, talk about the project, give feedback..
+        Everything is welcome.
+        Some future feature are planned. The most exciting is WebRTC.
+        -->
+
+
+
+        <!-- DEMO +++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <section>
+          <section>
+            <h1>DEMO</h1>
+            <h3>(who bet I'm going to fail?)</h3>
+          </section>
+          <section data-background="assets/BSOD.png">
+          </section>
+        </section>
+        <!--
+        Me, dying on stage
+        Check demo.html
+        -->
+
+        <section>
+          <h2 class="quote">Please mind the gap between the n00b and the NodeJS dev.</h2>
+        </section>
+        <!-- 
+        'Back after the demo, a quick note on accessibility'
+        The accessibility must be at every level:
+        from the developers with a simple API and rich documentation,
+        and end users with something intuitive and fast to use.
+        -->
+
+        <section data-background="#F0DB4F" class="js-theme">
+          <h1>Thanks everybody</h1>
+          <h3><u>github.com/liwe</u><br/>
+          <u>gitter.im/liwe/liwe</u><br/>
+          <u>liwe.co</u></h3>
+        </section>
+
+        <section data-background="assets/faceslap.gif">
+          <h1><span class="hype">Questions?</span></h1>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+    	// Full list of configuration options available at:
+    	// https://github.com/hakimel/reveal.js#configuration
+    	Reveal.initialize({
+    		controls: false,
+    		progress: true,
+    		history: true,
+    		center: true,
+
+    		transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+    		// Optional reveal.js plugins
+    		dependencies: [
+          {
+            src: 'lib/js/classList.js',
+            condition: function() { return !document.body.classList; }
+          },
+          {
+            src: 'plugin/markdown/marked.js',
+            condition: function() { return !!document.querySelector( '[data-markdown]' ); }
+          },
+          {
+            src: 'plugin/markdown/markdown.js',
+            condition: function() { return !!document.querySelector( '[data-markdown]' ); }
+          },
+          {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            condition: function() { return !!document.querySelector( 'pre code' ); },
+            callback: function() { hljs.initHighlightingOnLoad(); }
+          },
+          {
+            src: 'plugin/zoom-js/zoom.js',
+            async: true
+          },
+          {
+            src: 'plugin/notes/notes.js',
+            async: true
+          }
+        ]
+      });
+
+    </script>
+  </body>
+</html>
